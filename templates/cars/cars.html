@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% for i in cars %}
+<h1>{{i.title}}</h1>
+<img src="{{i.image.url}}" alt="">
+<br>
+<button><a href="/cars_detail/{{i.id}}">Подробнее.....</a></button>
+{% endfor %}
+
+</body>
+</html>
