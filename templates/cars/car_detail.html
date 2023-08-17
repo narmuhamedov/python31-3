@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>{{car_id.title}}</h1>
-<img src="{{car_id.image.url}}" alt="">
-<p>{{car_id.description}}</p>
-<p><b>{{car_id.color}}</b></p>
-<p>{{car_id.type_car}}</p>
-<p><a href="{{car_id.url_car}}">{{car_id.url_car}}</a></p>
-<p>{{car_id.created_at}}</p>
-</body>
-</html>
+{% include 'cars/header.html' %}
+<center>
+<div class="card" style="width: 18rem;">
+  <img src="{{car_id.image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+      <h1>{{car_id.title}}</h1>
+    <p class="card-text">{{car_id.description}}</p>
+       <p class="card-text">{{car_id.color}}</p>
+       <p class="card-text">{{car_id.type_car}}</p>
+       <p class="card-text"><a href="{{car_id.url_car}}">{{car_id.url_car}}</a></p>
+      <p class="card-text">{{car_id.created_at}}</p>
+
+  </div>
+</div>
+</center>
+{% include 'cars/footer.html' %}

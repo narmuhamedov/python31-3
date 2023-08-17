@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-{% for i in cars %}
-<h1>{{i.title}}</h1>
-<img src="{{i.image.url}}" alt="">
-<br>
-<button><a href="/cars_detail/{{i.id}}">Подробнее.....</a></button>
+{% include 'cars/header.html' %}
+<center>
+    <h1>Список машин</h1><br>
+    {% for i in cars %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{i.title}}</h5><br>
+    <a href="/cars_detail/{{i.id}}" class="btn btn-primary">детальнее</a>
+  </div>
+</div>
+    <hr>
+    <hr>
 {% endfor %}
+</center>
+{% include 'cars/footer.html' %}
 
-</body>
-</html>
