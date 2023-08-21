@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Crud</title>
+</head>
+<body>
+
+<form action="/add-cars/" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Добавить в БД</button>
+
+</form>
+
+</body>
+</html>
