@@ -1,7 +1,7 @@
 {% include 'cars/header.html' %}
 <center>
     <h1>Список машин</h1><br>
-    {% for i in cars %}
+    {% for i in object_list %}
 <div class="card" style="width: 18rem;">
   <img src="{{i.image.url}}" class="card-img-top" alt="...">
   <div class="card-body">

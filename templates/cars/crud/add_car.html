@@ -1,17 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Add Crud</title>
+    <link rel="stylesheet" href="{% static 'css/style_crud.css' %}">
 </head>
 <body>
-
-<form action="/add-cars/" method="post" enctype="multipart/form-data">
-  {% csrf_token %}
+<form class="decor" action="/add-cars/" method="post" enctype="multipart/form-data">
+<div class="form-left-decoration"></div>
+<div class="form-right-decoration"></div>
+<div class="circle"></div>
+<div class="form-inner">
+<h3>Добавить новую машину в БД</h3>
+    {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit">Добавить в БД</button>
 
+<input type="submit" value="Добавить">
+</div>
 </form>
+
 
 </body>
 </html>

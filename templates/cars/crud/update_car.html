@@ -1,14 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Update</title>
+    <title>Add Crud</title>
+    <link rel="stylesheet" href="{% static 'css/style_crud.css' %}">
 </head>
 <body>
-<form method="post" enctype="multipart/form-data">
+<form class="decor"  method="post" enctype="multipart/form-data">
+<div class="form-left-decoration"></div>
+<div class="form-right-decoration"></div>
+<div class="circle"></div>
+<div class="form-inner">
+<h3>Изменить машину</h3>
     {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit">обновить</button>
+  {{ form.as_p }}
+
+<input type="submit" value="Изменить">
+</div>
 </form>
+
+
 </body>
 </html>
