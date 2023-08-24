@@ -109,14 +109,16 @@ class UpdateCarView(generic.UpdateView):
 
 
 class Search(generic.ListView):
-    template_name = 'cars/cars.html'
-    context_object_name = 'cars'
+    template_name = "cars/cars.html"
+    context_object_name = "car"
     paginate_by = 5
 
     def get_queryset(self):
-        return models.Cars.object.filter(title__icontains=self.request.GET.get('q'))
+        return models.Cars.objects.filter(
+            title__icontains=self.request.GET.get("q")
+        )
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['q'] = self.request.GET.get('q')
+        context["q"] = self.request.GET.get("q")
         return context
