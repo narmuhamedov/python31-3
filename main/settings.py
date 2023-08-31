@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'blog',
     'cars',
     'parser_app',
+    'custom_users',
 
 ]
 
