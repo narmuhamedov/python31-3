@@ -9,5 +9,6 @@ urlpatterns = [
     path('', include('cars.urls')),
     path('', include('parser_app.urls')),
     path('', include('custom_users.urls')),
+    path('', include('product.urls')),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
 +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

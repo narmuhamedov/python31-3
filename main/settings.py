@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'cars',
     'parser_app',
     'custom_users',
+    'product',
 
 ]
 
